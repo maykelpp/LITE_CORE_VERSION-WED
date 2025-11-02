@@ -6,7 +6,9 @@ import time
 from pathlib import Path
 import glob
 
+# Inicializa la app Flask
 app = Flask(__name__)
+
 
 # Directorio para descargas
 DOWNLOAD_FOLDER = 'downloads'
