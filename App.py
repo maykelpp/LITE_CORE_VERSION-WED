@@ -1125,15 +1125,17 @@ def list_files():
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)})
 
+# === Inicio del servidor ===
 if __name__ == '__main__':
     print("=" * 60)
-    print("⚡ LITE CORE - WEB VERSION")
+    print(" LITE CORE VERSIÓN WEB")
     print("=" * 60)
-    print(f"📁 Carpeta de descargas: {os.path.abspath(DOWNLOAD_FOLDER)}")
-    print(f"🌐 Acceso local: http://localhost:5000")
-    print(f"🌐 Acceso en red: http://0.0.0.0:5000")
+    print(f" Carpeta de descargas: {os.path.abspath(DOWNLOAD_FOLDER)}")
+    print(f" Acceso local:  http://localhost:5000")
+    print(f" Acceso en red: http://0.0.0.0:5000")
     print("=" * 60)
-    print("🚀 Plataforma Multi-Uso Iniciada Correctamente")
+    print(" Plataforma Multi-Uso Iniciada Correctamente ✅")
     print("=" * 60)
-    
-    app.run(host='0.0.0.0', port=5000, debug=True)
+
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
+
